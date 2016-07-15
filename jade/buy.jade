@@ -1,0 +1,52 @@
+extends _layout
+
+block content
+    .container
+        - var payMethods = [{src: "1.png", desc: "Банковской картой"}, {src: "2.png", desc: "Платежная система Weboney"}, {src: "3.png", desc: "Платежная система Paypal"}, {src: "4.png", desc: "Оплата через смс"}, {src: "5.png", desc: "Платежная система Yandex.Money"}, {src: "6.png", desc: "Платежная система Qiwi"}, {src: "7.png", desc: "Платежная система Bitcoin"}]
+        article#work-space
+            include _sidebar
+            article#content
+                #buy
+                    h2 Купить номер
+                    article
+                        section#price
+                            section.price-items
+                                .item-one
+                                    p Ваша цена
+                                    h3
+                                        span Р
+                                        |  1000
+                                .item-two
+                                    p
+                                        | Вы можете
+                                        a(href="#") зарегистрироваться
+                                        br
+                                        |  и получить
+                                        strong  скидку
+                                     h3
+                                         span Р
+                                         |  800
+                                     span.item-sale 20%
+                            section.pay-method
+                                h4 Выберите способ оплаты
+                                form#pay
+                                    each method in payMethods
+                                        .radio
+                                            label
+                                                input(type="radio" name="pay-method")
+                                                .image
+                                                    img(src="images/buy/method/#{method.src}")
+                                                | #{method.desc}
+                                    p
+                                        span *
+                                        | Информация о системе, процент комисии
+                                    button(type="submit") Оплатить
+                        section#info
+                            h3: a(href="#") Вика, 26 лет
+                            p.city Иркутск
+                            p Вика предлагает вам
+                                br
+                                | преобрести её номер телефона
+                            .photo
+                                img(src="images/buy/girl.png")
+                            .status Если ты хочешь со мной потусить возьми мой номер телефона

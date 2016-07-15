@@ -1,0 +1,17 @@
+- var footerItems = ["Написать нам", "Партнерам", "Реклама", "Блог", "Пресса о нас"]
+footer#footer
+    article
+        section
+            p © HanyPot 2016
+                span.hidden-xs  сервис который поможет вам быстро начать общение
+                span.mobile-tel  +7(000) 00-00-00
+            ul
+                li.hidden-xs +7(000) 00-00-00
+                each item in footerItems
+                    li: a(href="#") #{item}
+        section
+            p Следите за нами:
+            .hp-social-items
+                a(href="#").ok: img(src="images/ok.png")
+                a(href="#").fb: img(src="images/fb.png")
+                a(href="#").vk: img(src="images/vk.png")

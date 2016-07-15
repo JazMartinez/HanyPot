@@ -1,0 +1,37 @@
+- var menuItems = [{desc: "Моя страница", src: "#"},{desc: "Мои финансы", src: "#"}, {desc: "Визитки для меня", src: "visitka.html"}, {desc: "Поиск", src: "filter.html"}, {desc: "Вы нравитесь", src: "my-likes.html"}, {desc: "Поситители", src: "#"}, {desc: "Избранное", src: "liked.html"}]
+    #sidebar.sb-open
+        a(href="#").turn Свернуть
+        .hp-sidebar-profile
+            h3 Полумна Лавгуд
+            section
+                .profile-avatar
+                    a(href="#"): img(src="images/sidebar/avatar.png")
+                .profile-desc
+                    section
+                        p!= '<span></span> Просмотров:'
+                        p!= '<span></span> Купивших:'
+                        p Популярность:
+                    section
+                        p 120
+                        p 26
+                        span
+            p.profile!= '23 года <span>(козерог)</span>'
+        nav.hp-sidebar-menu
+            ul
+                each item in menuItems
+                    li: a(href="#{item.src}").animsition-link: b #{item.desc}
+                        span
+        .hp-sidebar-message
+            p Сообщение для покупателя
+            div Люблю егерь и бильярд,
+                br
+                | го погоняем шары))))
+        .hp-sidebar-reklama
+            h3: span реклама
+            .reklama-image
+                div
+                    img(src="images/sidebar/girl.png")
+                p Альбина, 26 лет
+            a(href="#") Хочу разместиться здесь
+
+

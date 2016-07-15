@@ -1,0 +1,208 @@
+#game {
+  position: relative;
+  padding-top: 30px;
+  h2 {
+    width: auto;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    a {
+      font-weight: 400;
+      font-size: 36px;
+      color: #393939;
+      margin-right: 5px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .status {
+      position: absolute;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background: $color-green;
+    }
+  }
+  #block-game {
+    width: 825px;
+    height: auto;
+    margin: 30px auto 0;
+    #block-img {
+      width: 100%;
+      height: 503px;
+      overflow: hidden;
+    }
+    #block-buy-number {
+      position: relative;
+      border-bottom: 1px solid #ebebeb;
+      .block-likes {
+        position: relative;
+        width: 147px;
+        height: 50px;
+        background: transparentize(#3d3d3d, .6);
+        border-radius: 40px;
+        font-size: 18px;
+        color: #ffffff;
+        padding: 0 17px;
+        margin: -75px auto 55px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        span:nth-of-type(1):before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 1px;
+          height: 24px;
+          margin: -12px 0 0 -1px;
+          background: #fff;
+        }
+      }
+      .block-liked {
+        position: relative;
+        width: 100%;
+        height: 82px;
+        border: 1px solid #ebebeb;
+        border-radius: 50px;
+        box-shadow: 0 3px 7px 0 rgba(0,0,0,.15);
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-around;
+        section {
+          position: relative;
+          &:before,
+          &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            width: 40px;
+            height: 40px;
+            background: no-repeat center;
+          }
+          &:before {
+            background-image: url("../images/game/like.png");
+            left: -100px;
+          }
+          &:after {
+            background-image: url("../images/game/dislike.png");
+            right: -100px;
+          }
+          &:nth-of-type(1):after {
+            display: none;
+          }
+          &:nth-of-type(2):before {
+            display: none;
+          }
+          a {
+            font-size: 18px;
+            color: #4e4e4e;
+            transition: color .3s linear;
+            &:hover,
+            &:focus {
+              color: darken(#4e4e4e, 10%);
+              text-decoration: none;
+            }
+          }
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: 1px;
+          height: 81px;
+          background: #ebebeb;
+        }
+      }
+      .block-button {
+        margin: 30px 0;
+        a {
+          display: block;
+          width: 340px;
+          height: 62px;
+          background-color: $color-blue;
+          margin: 0 auto;
+          color: #ffffff;
+          font-size: 18px;
+          font-weight: 700;
+          border-radius: 10px;
+          padding: 20px 0;
+          transition: background .3s linear;
+          &:hover,
+          &:focus {
+            text-decoration: none;
+            background: darken($color-blue, 10%);
+          }
+        }
+      }
+    }
+  }
+  #block-desc {
+    position: relative;
+    padding-top: 30px;
+    p {
+      font-size: 15px;
+      color: #000000;
+    }
+    .verify {
+      p {
+        padding: 5px 0 5px 27px;
+        margin-bottom: 5px;
+        background: no-repeat left;
+        &:nth-of-type(1) {
+          background-image: url('../images/game/verify.png');
+        }
+        &:nth-of-type(2) {
+          background-image: url('../images/game/city.png');
+        }
+      }
+    }
+  }
+}
+
+.social {
+  p {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .social-items {
+    display: inline-flex;
+    a {
+      display: block;
+      width: 26px;
+      height: 26px;
+      background: url("../images/social.png") no-repeat;
+      & + a {
+        margin-left: 20px;
+      }
+      &:nth-of-type(1) {
+        background-position: -10px -45px;
+        &.active {
+          background-position: -10px -13px;
+        }
+      }
+      &:nth-of-type(2) {
+        background-position: -59px -46px;
+        &.active {
+          background-position: -59px -13px;
+        }
+      }
+      &:nth-of-type(3) {
+        background-position: -111px -46px;
+        &.active {
+          background-position: -111px -13px;
+        }
+      }
+      &:nth-of-type(4) {
+        background-position: -160px -45px;
+        &.active {
+          background-position: -160px -12px;
+        }
+      }
+    }
+  }
+}

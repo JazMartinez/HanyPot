@@ -1,0 +1,104 @@
+extends _layout
+
+block content
+    .container
+        article#work-space
+            include _sidebar-log-out
+            article#content
+                article#filter
+                    h2 Поиск
+                    .filter-items
+                        form#search-form
+                            .row
+                                .checkbox
+                                    label
+                                        input(type="checkbox")
+                                        | Девушки
+                                .checkbox
+                                    label
+                                        input(type="checkbox")
+                                        | Мужчины
+                            .row
+                                p Возраст
+                                #slider
+                            .row
+                                p Город
+                                select.form-control
+                                    option(selected="selected") Иркутск
+                            .row.text-center
+                                button(type="submit") Применить
+                                a(href="#") Расширенный фильтр >
+                        .filter-item
+                            div.text-center
+                                img(src="images/filter/1.png")
+                                span.like
+                            h3
+                                a(href="#") Николай Сюткин
+                                span.item-pro.active
+                            p!= '27 лет (Козерог)'
+                            p Иркутск
+                        .filter-item
+                            div.text-center
+                                img(src="images/filter/2.png")
+                                span.like.active
+                            h3
+                                a(href="#") Николай Сюткин
+                                span.item-pro
+                            p!= '27 лет (Рыбы)'
+                            p Иркутск
+                        .filter-item
+                            div.text-center
+                                img(src="images/filter/3.png")
+                                span.like
+                            h3
+                                a(href="#") Николай Сюткин
+                                span.item-pro
+                            p!= '27 лет (Весы)'
+                            p Иркутск
+                        .filter-item
+                            div.text-center
+                                img(src="images/filter/4.png")
+                                span.like
+                            h3
+                                a(href="#") Николай Сюткин
+                                span.item-pro.active
+                            p!= '27 лет (Овен)'
+                            p Иркутск
+                        .filter-item
+                            div.text-center
+                                img(src="images/filter/1.png")
+                                span.like
+                            h3
+                                a(href="#") Николай Сюткин
+                                span.item-pro
+                            p!= '27 лет (Козерог)'
+                            p Иркутск
+                        .filter-item
+                            div.text-center
+                                img(src="images/filter/2.png")
+                                span.like
+                            h3
+                                a(href="#") Николай Сюткин
+                                span.item-pro
+                            p!= '27 лет (Рыбы)'
+                            p Иркутск
+                        .filter-item
+                            div.text-center
+                                img(src="images/filter/3.png")
+                                span.like
+                            h3
+                                a(href="#") Николай Сюткин
+                                span.item-pro
+                            p!= '27 лет (Весы)'
+                            p Иркутск
+                        .filter-item
+                            div.text-center
+                                img(src="images/filter/4.png")
+                                span.like
+                            h3
+                                a(href="#") Николай Сюткин
+                                span.item-pro.active
+                            p!= '27 лет (Овен)'
+                            p Иркутск
+                    article.more-results
+                        a(href="#") Загрузить еще

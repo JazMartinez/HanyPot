@@ -1,0 +1,116 @@
+extends _layout
+
+block content
+    .container
+        - var photoSrc = ["images/sidebar/slider/1.png", "images/sidebar/slider/2.png", "images/sidebar/slider/3.png","images/sidebar/slider/1.png", "images/sidebar/slider/2.png", "images/sidebar/slider/3.png"]
+        article#work-space
+            include _sidebar
+            article#content
+                article#lk-my-info.hidden-md.hidden-lg.hidden-sm
+                    .hp-sidebar-profile
+                        .profile-avatar
+                            a(href="#"): img(src="images/sidebar/avatar.png")
+                        .profile-desc
+                            section
+                                h3 Полумна Лавгуд
+                                p!= '23 года <span>(козерог)</span>'
+                                p Популярность:
+                                    span
+                                .status Меня трудно найти, легко  потерять и невозможно забыть
+                article#lk-balance
+                    h3!= 'Баланс: <span>Р</span> 12 000'
+                    button Вывод средств
+                article#lk-info
+                    h2.hidden-md.hidden-lg.hidden-sm Ваши данные:
+                    .row
+                        a(href="").edit Редактировать
+                    .row
+                        .col-md-4
+                            p Телефон:
+                            p Стоимость номера:
+                            p Ваше имя:
+                            p Ваш адрес-ID:
+                            p Ваш город:
+                        .col-md-8
+                            p +7(000) 00-00-00
+                            p!= '<span>Р</span> 2000'
+                            p Палумна Лавгуд
+                            p!= "<span>hanypot.ru/</span>Polumna_91"
+                            p Лондон
+                article#lk-verify
+                    .row
+                        .col-md-7
+                            .row
+                                .col-md-6
+                                    p Статус:
+                                    p Публикация:
+                                    p Верификация профиля:
+                                .col-md-6
+                                    p.item-pro Персональный
+                                    .checkbox
+                                        input(type="checkbox").box#active
+                                        span.box-bg
+                                        span.box-style
+                                        label(for="active") Активна
+                                    .checkbox
+                                        input(type="checkbox" checked="checked" disabled).box#verify
+                                        span.box-bg
+                                        span.box-style
+                                        label(for="verify") Подтверждена
+                        .col-md-5
+                            .social
+                                p Привязанные соцсети:
+                                .social-items
+                                    a(href="#"): span
+                                    a(href="#").active: span
+                                    a(href="#").active: span
+                                    a(href="#"): span
+                article#lk-photo
+                    h2 Фотографии:
+                    section
+                        #lk-photo-slider.slider-pro
+                            .sp-slides
+                                each photo in photoSrc
+                                    .sp-slide
+                                        img(src="#{photo}")
+                                        a(href="#").remove-photo
+                                        input(type="radio" name="main-photo").main-photo
+                                        label Главная фотография
+                        .download-btn
+                            input(type="file")
+                            span.file-bg
+                            span.file-text Добавить
+                article#lk-profile
+                    h2 Профиль:
+                    .row
+                        .col-md-3
+                            p Дата рождения:
+                            p Цвет волос:
+                            p Цвет глаз:
+                            p Вес:
+                            p Рост:
+                            p Увлечения:
+                            p Страна:
+                        .col-md-9
+                            .form-group
+                                select
+                                    option 123
+                                select
+                                    option 123
+                                select
+                                    option 123
+                            .form-group
+                                select.form-control
+                                    option 123
+                            .form-group
+                                select.form-control
+                                    option 123
+                            .form-group
+                                input(type="text").form-control
+                            .form-group
+                                input(type="text").form-control
+                            .form-group
+                                textarea(rows="8").form-control
+                            .form-group
+                                select.form-control
+                                    option 123

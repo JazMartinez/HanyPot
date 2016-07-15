@@ -1,0 +1,217 @@
+#buy {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+  h2 {
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    color: #393939;
+  }
+  article {
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    justify-content: space-between;
+    #price {
+      position: relative;
+      width: 447px;
+      height: auto;
+      margin-top: 20px;
+      .price-items {
+        width: 100%;
+        height: 227px;
+        border: 1px solid #ebebeb;
+        border-radius: 5px;
+        h3 {
+          position: relative;
+          font-size: 48px;
+          font-weight: 700;
+          margin: 0;
+          padding: 0;
+          span {
+            position: relative;
+            &:before {
+              content: '';
+              position: absolute;
+              top: 36px;
+              left: 0;
+              width: 19px;
+              height: 6px;
+            }
+          }
+        }
+        .item-one {
+          padding: 15px 20px;
+          height: 50%;
+          p {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+          }
+          h3 {
+            color: #f88686;
+            span:before {
+              background: #f88686 ;
+            }
+          }
+        }
+        .item-two {
+          position: relative;
+          padding: 15px 20px;
+          height: 50%;
+          background: #f5f5f5;
+          overflow: hidden;
+          p {
+            position: relative;
+            font-size: 18px;
+            margin: 0;
+            line-height: 1.2;
+            z-index: 10;
+            a {
+              margin-left: 8px;
+              text-decoration: underline;
+            }
+          }
+          h3 {
+            color: #52aad7;
+            span:before {
+              background: #52aad7 ;
+            }
+          }
+          .item-sale {
+            position: absolute;
+            right: -8px;
+            bottom: -25px;
+            display: block;
+            color: #43d311;
+            font-size: 105px;
+            font-weight: 700;
+            line-height: 1;
+            z-index: 5;
+          }
+        }
+      }
+      .pay-method {
+        position: relative;
+        width: 100%;
+        margin-top: 50px;
+        h4 {
+          font-size: 24px;
+          color: #393939;
+          font-weight: 700;
+        }
+        #pay {
+          .radio {
+            margin: 20px 0;
+            label {
+              display: inline-flex;
+              justify-content: space-between;
+              font-size: 18px;
+              font-weight: 300;
+            }
+            .image{
+              width: 50px;
+              text-align: left;
+              margin-left: 10px;
+            }
+          }
+          p {
+            position: relative;
+            font-weight: 100;
+            font-size: 18px;
+            padding-left: 10px;
+            span {
+              margin-top: -5px;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+          button {
+            margin-top: 65px;
+            width: 350px;
+            height: 63px;
+            padding: 20px 0;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: none;
+            border: none;
+            background: $color-blue;
+            border-radius: 10px;
+            transition: all .3s linear;
+            &:hover,
+            &:focus {
+              background: darken($color-blue, 10%);
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+    #info {
+      position: relative;
+      width: 350px;
+      height: auto;
+      h3 {
+        position: relative;
+        a {
+          font-size: 24;
+          font-weight: 700;
+          color: #52aad7;
+          text-decoration: underline;
+        }
+      }
+      p {
+        font-size: 20px;
+        font-weight: 100;
+        color: #393939;
+        &.city {
+          font-weight: 400;
+          font-size: 18px;
+          margin: -10px 0 5px 0;
+          border-bottom: 1px solid #ebebeb;
+        }
+      }
+      .photo {
+        width: 350px;
+        height: 290px;
+        overflow: hidden;
+        text-align: center;
+        img {
+          position: relative;
+          left: -25%;
+        }
+      }
+      .status {
+        position: relative;
+        margin-top: 47px;
+        padding: 0 30px;
+        font-size: 18px;
+        font-weight: 300;
+        font-style: italic;
+        color: #000000;
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          width: 41px;
+          height: 33px;
+          background: url("../images/buy/quotes.png") no-repeat center;
+        }
+        &:before {
+          top: -20px;
+          left: -15px;
+        }
+        &:after {
+          bottom: -12px;
+          right: 10px;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

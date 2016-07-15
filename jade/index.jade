@@ -1,0 +1,108 @@
+extends _layout
+
+block content
+    .container
+        .row
+            article#hp-promo
+                h1
+                    img(src="images/promo-logo.png" alt="HanyPot").img-responsive
+                p Самый быстрый способ начать разговаривать с девушкой. А также популярный сервис знакомств!
+                ul(role="tablist")
+                    li(role="presentation"): a(href="#men" aria-controls="" role="tab" data-toggle="tab") Мужчина
+                    li(role="presentation").active: a(href="#women" aria-controls="" role="tab" data-toggle="tab") Женщина
+            article#hp-reg
+                h2 Регистрация
+                .row
+                    .col-sm-6
+                        .hp-reg-without
+                            h4 Зарегистрируйтесь, чтобы начать зарабатывать деньги
+                            a(href="#") Продолжить без регистрации
+                        form#hp-reg-form
+                            .hp-reg-step-one
+                                .form-group
+                                    input(type="text" name="name" placeholder="Имя" required="required").form-control
+                                .form-group
+                                    input(type="tel" name="phone" placeholder="+7 (___) ___-____" required="required").input-phone.form-control
+                                .form-group
+                                    input(type="email" name="email" placeholder="E-mail" required="required").form-control
+                                a.form-control.btn.continue-reg Продолжить
+                                .checkbox
+                                    label
+                                        input(type="checkbox")
+                                        | Запомнить меня
+                            .hp-reg-step-two
+                                .form-group
+                                    input(type="tel" name="phone" placeholder="+7 (___) ___-____" required="required").input-phone.form-control
+                                    a(href="javascript:void(0);").reset
+                                .form-group
+                                    input(type="email" name="tel" placeholder="Код" required="required").form-control
+                                a(href="#").repeat Повторить отправку
+                                button.form-control.btn Подтвердить
+                            p Регистрируясь, вы соглашаетесь с нашими Условиями и Политикой конфиденциальности.
+                .tab-content
+                    div(role="tabpanel").tab-pane.fade#men
+                        .hp-tab-img
+                            img(src="images/promo-men.png")
+                        .hp-tab-caption
+                            img(src="images/reg-men.png")
+                            .text-center
+                                h3 Мужчина
+                                p Покажи на что ты способен ради девушки своей мечты
+                                p Сервис знакомств HanyPot создан для тех, кто хочет знакомиться и зарабатывать на этом деньги.
+                    div(role="tabpanel").tab-pane.fade.in.active#women
+                        .hp-tab-img
+                            img(src="images/promo-women.png")
+                        .hp-tab-caption
+                            img(src="images/reg-women.png")
+                            .text-center
+                                h3 Женщина
+                                p Узнай на что мужчины готовы ради тебя
+                                p Сервис знакомств HanyPot создан для тех, кто хочет знакомиться и зарабатывать на этом деньги.
+            article#hp-prim
+                h2 Приемущества
+                section.hidden-xs
+                    .row.text-center
+                        .col-sm-4
+                            img(src="images/prem-1.png")
+                        .col-sm-4
+                            img(src="images/prem-2.png")
+                        .col-sm-4
+                            img(src="images/prem-3.png")
+                    .row.text-center
+                        .col-sm-4
+                            .hp-prim-item
+                                h3 Заработай
+                                    br
+                                    | на сервисе
+                                p Продавай свой номер за любую сумму и выводи деньги без ограничений в любое время абсолютно бесплатно!
+                        .col-sm-4
+                            .hp-prim-item
+                                h3 Люди
+                                    br
+                                    | рядом
+                                p HaneyPot поможет Вам найти людей поблизости!
+                        .col-sm-4
+                            .hp-prim-item
+                                h3 Безопасность
+                                p Мы обеспечиваем безопасность предоставляемых Вами данных и совершенных платежей!
+                section.hidden-sm.hidden-lg.hidden-md
+                    .row.text-center
+                        .col-xs-12
+                            img(src="images/prem-1.png")
+                            .hp-prim-item
+                                h3 Заработай
+                                    br
+                                    | на сервисе
+                                p Продавай свой номер за любую сумму и выводи деньги без ограничений в любое время абсолютно бесплатно!
+                        .col-xs-12
+                            img(src="images/prem-2.png")
+                            .hp-prim-item
+                                h3 Люди
+                                    br
+                                    | рядом
+                                p HaneyPot поможет Вам найти людей поблизости!
+                        .col-xs-12
+                            img(src="images/prem-3.png")
+                            .hp-prim-item
+                                h3 Безопасность
+                                p Мы обеспечиваем безопасность предоставляемых Вами данных и совершенных платежей!

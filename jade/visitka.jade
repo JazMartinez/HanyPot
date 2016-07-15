@@ -1,0 +1,31 @@
+extends _layout
+
+block content
+    .container
+        article#work-space
+            include _sidebar
+            article#content
+                -var slideStyles = ["1.png", "2.png", "3.png", "4.png", "1.png", "2.png", "3.png", "4.png"]
+                #visitka
+                    h2 Заказать визитку
+                    article
+                        #vis-edit
+                            h3 Лицевая сторона:
+                            section
+                                div
+                                    img(src="images/visitka/logo.png")
+                                    p Самый быстрый способ начать разговаривать с девушкой.
+                                        br
+                                        | А также популярный сервис знакомств!
+                            h3 Задняя сторона:
+                            section
+                                p hanypot.ru\Polumna_91
+                        #vis-style
+                            h3 Уникальные стили:
+                            #slider-styles.slider-pro
+                                .sp-slides
+                                    each slide in slideStyles
+                                        .sp-slide
+                                            img(src="images/visitka/slider/#{slide}")
+
+

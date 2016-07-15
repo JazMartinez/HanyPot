@@ -1,0 +1,57 @@
+$color-blue: #2196d1;
+$color-green: #01cf91;
+$color-yellow: #f8aa2b;
+$color-grey: #e9e9e9;
+
+//Bootstrap
+@import "import/bootstrap/bootstrap";
+//Header
+@import "import/header";
+//Home page
+@import "import/main";
+//Footer
+@import "import/footer";
+//Sidebar
+@import "import/sidebar";
+//Kabinet
+@import "import/kabinet";
+//Filter
+@import "import/filter";
+//Liked
+@import "import/liked";
+//Game
+@import "import/game";
+//Buy
+@import "import/buy";
+//visitka
+@import "import/visitka";
+//personal
+@import "import/personal";
+//registration
+@import "import/registration";
+//modals
+@import "import/_modals.scss";
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #000000;
+}
+#work-space {
+  display: flex;
+  justify-content: space-between;
+}
+#content {
+  position: relative;
+  height: auto;
+  width: 100%;
+  margin-left: 40px;
+  transition: width .2s linear;
+  z-index: 5;
+  @media screen and (max-width: $screen-tablet) {
+    width: 96%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}

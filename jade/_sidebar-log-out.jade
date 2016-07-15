@@ -1,0 +1,35 @@
+- var menuItems = [{desc: "Моя страница", src: "#"},{desc: "Мои финансы", src: "#"}, {desc: "Визитки для меня", src: "visitka.html"}, {desc: "Поиск", src: "filter.html"}, {desc: "Вы нравитесь", src: "my-likes.html"}, {desc: "Поситители", src: "#"}, {desc: "Избранное", src: "liked.html"}]
+#sidebar.sb-open.sidebar-log-out
+    a(href="#").turn Свернуть
+    .hp-sidebar-profile
+        h3 Инкогнито
+            span (
+                a(href="#") Войти
+                | )
+        section
+            .profile-avatar
+                a(href="#"): img(src="images/sidebar/avatar-log-out.png")
+            .profile-desc
+                section
+                    p!= '<span></span> Просмотров:'
+                    p!= '<span></span> Купивших:'
+                    p Популярность:
+                section
+                    span.reiting
+    nav.hp-sidebar-menu
+        ul
+            each item in menuItems
+                li: a(href="#{item.src}").animsition-link: b #{item.desc}
+                    span
+    .hp-sidebar-message
+        a(href="#")
+            span Зарегистрируйся, получи полный доступ и скидку
+    .hp-sidebar-reklama
+        h3: span реклама
+        .reklama-image
+            div
+                img(src="images/sidebar/girl.png")
+            p Альбина, 26 лет
+        a(href="#") Хочу разместиться здесь
+
+

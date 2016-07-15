@@ -1,0 +1,54 @@
+extends _layout
+
+block content
+    .container
+        article#work-space
+            include _sidebar
+            article#content
+                article#game
+                    h2
+                        a(href="") Гермиона, 19лет
+                        span.status
+                    article#block-game
+                        section#block-img.slider-pro
+                            .sp-slides
+                                .sp-slide
+                                    img(src="images/game/1.png")
+                        section#block-buy-number
+                            .block-likes
+                                span 7
+                                span 21
+                            .block-liked
+                                section
+                                    a(href="") Нравится
+                                section
+                                    a(href="") Не нравится
+                            .block-button.text-center
+                                a(href="#") Узнать ее номер
+                        section#block-desc
+                            .row
+                                .col-md-2
+                                    p Образование:
+                                    p Город:
+                                    p Цвет волос:
+                                    p Цвет глаз:
+                                    p Вес:
+                                    p Рост:
+                                    p Увлечения:
+                                .col-md-3
+                                    p Высшее
+                                    p Иркутск (Россия)
+                                    p Каштановый
+                                    p Карий
+                                    p 50
+                                    p 164
+                                    p Путешествия, книги
+                                .col-md-6.col-md-offset-1
+                                    .social
+                                        .loaction
+                                            p Москва
+                                        .social-items
+                                            a(href="#"): span
+                                            a(href="#").active: span
+                                            a(href="#").active: span
+                                            a(href="#"): span

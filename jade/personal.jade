@@ -1,0 +1,93 @@
+extends _layout
+
+block content
+    .container
+        article#work-space
+            include _sidebar
+            article#content
+                -var infoSlides = ["1.png", "1.png", "1.png", "1.png"]
+                #personal
+                    h2 Гермиона, 23 года
+                        a(href="#").liked-star
+                    article#info
+                        section#info-photo.open
+                            #info-slider.slider-pro
+                                .sp-slides
+                                    each info in infoSlides
+                                        .sp-slide
+                                            img(src="images/personal/slider/#{info}").img-responsive
+                                .sp-thumbnails
+                                    each info in infoSlides
+                                        .sp-thumbnail
+                                            img(src="images/personal/slider/#{info}").img-responsive
+                        section#info-desc
+                            .rating
+                                p Мне нравится
+                                    span
+                                p Популярность:
+                                    span
+                                a(href="#") Узнать ее телефон
+                            .social
+                                p Профиль верефицирован
+                                p Привилегированный
+                                .social-items
+                                    a(href="#"): span
+                                    a(href="#").active: span
+                                    a(href="#").active: span
+                                    a(href="#"): span
+                            .inform
+                                div
+                                    p: strong Образование:
+                                    p: strong Город:
+                                    p: strong Цвет волос:
+                                    p: strong Цвет глаз:
+                                    p: strong Вес:
+                                    p: strong Рост:
+                                    p: strong Увлечения
+                                div
+                                    p Высшее
+                                    p Иркутск (Россия)
+                                    p Каштановый
+                                    p Карий
+                                    p 50
+                                    p 164
+                                    p Путежествия, книги
+                    article
+                        h3 Другие девушки:
+                        .filter-items
+                            .filter-item
+                                div.text-center
+                                    img(src="images/filter/1.png")
+                                    span.like
+                                h3
+                                    a(href="#") Николай Сюткин
+                                    span.item-pro.active
+                                p!= '27 лет (Козерог)'
+                                p Иркутск
+                            .filter-item
+                                div.text-center
+                                    img(src="images/filter/2.png")
+                                    span.like.active
+                                h3
+                                    a(href="#") Николай Сюткин
+                                    span.item-pro
+                                p!= '27 лет (Рыбы)'
+                                p Иркутск
+                            .filter-item
+                                div.text-center
+                                    img(src="images/filter/3.png")
+                                    span.like
+                                h3
+                                    a(href="#") Николай Сюткин
+                                    span.item-pro
+                                p!= '27 лет (Весы)'
+                                p Иркутск
+                            .filter-item
+                                div.text-center
+                                    img(src="images/filter/4.png")
+                                    span.like
+                                h3
+                                    a(href="#") Николай Сюткин
+                                    span.item-pro.active
+                                p!= '27 лет (Овен)'
+                                p Иркутск

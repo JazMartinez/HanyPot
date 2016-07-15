@@ -1,0 +1,61 @@
+- var cities = ["Калуга", "Волгоград", "Екатеринбург", "Казань", "Красноярск", "Москва", "Нижний Новгород", "Новосибирск", "Пермь"];
+mixin radioCities
+    each city in cities
+        .radio
+            label
+                input(type="radio" name="location" value="#{city}")
+                |  #{city}
+header#header
+    .hp-head
+        article
+            section.hp-logo
+                a(href="index.html").animsition-link: img(src="images/logo.png").img-responsive
+            section.hp-user
+                .hp-message
+                    a(href="#"): span 3
+                section.hp-location
+                    button.hp-city Иркутск
+                section.hp-log
+                        a(href="#modal-login" data-toggle="modal" data-target="#modal-login").hp-login Вход
+                        a(href="#").hp-logout Выход
+                section.hp-language
+                    a(href="kabinet.html") En
+            section.mobile-sidebar.hidden-lg.hidden-sm.hidden-md
+                a(href="#").open-menu: span 3
+                section.mob-menu
+                    - var menuItems = [{desc: "Моя страница", src: "#"},{desc: "Мои финансы", src: "#"}, {desc: "Визитки для меня", src: "visitka.html"}, {desc: "Поиск", src: "filter.html"}, {desc: "Вы нравитесь", src: "my-likes.html"}, {desc: "Поситители", src: "#"}, {desc: "Избранное", src: "liked.html"}]
+                    .hp-sidebar-profile
+                        .profile-avatar
+                            a(href="#"): img(src="images/sidebar/avatar.png")
+                        .profile-desc
+                            h3 Полумна Лавгуд
+                            p!= '23 года <span>(Козерог)</span>'
+                            p Иркутск
+                            p Популярность:
+                                span
+                    nav.hp-sidebar-menu
+                        ul
+                            each item in menuItems
+                                li: a(href="#{item.src}").animsition-link: b #{item.desc}
+                                    span
+                    .hp-mobile-logout
+                        a(href="#") Выход
+                        a(href="#") Написать нам
+                        a(href="#") Партнерам
+    .hp-location-items
+        .container
+            .col-md-3
+                +radioCities
+            .col-md-3
+                +radioCities
+            .col-md-3
+                +radioCities
+            .col-md-3
+                p Выберите ваш город
+                form
+                    .form-group
+                        label(for="hp-search") Или укажите в поле
+                        .input-group
+                            input(type="search" required="required")#hp-search.form-control
+                            span.input-group-btn
+                                button.btn.btn-default(type="button")

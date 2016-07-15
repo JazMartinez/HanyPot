@@ -1,0 +1,197 @@
+extends _layout
+
+block content
+    .container
+        #work-space
+            include _sidebar
+            #content
+                article#liked
+                    //Tabs
+                    ul(role="tablist")
+                        li.active: a(href="#first-tab" aria-controls="first-tab" role="tab" data-toggle="tab") Вас добавили в избранное
+                        li: a(href="#second-tab" aria-controls="second-tab" role="tab" data-toggle="tab") Ваши избранные
+                    .tab-content
+                        article(role="tabpanel")#first-tab.tab-pane.active.fade.in
+                            .filter-items
+                                .filter-item
+                                    div.text-center
+                                        img(src="images/liked/1.png")
+                                        span.like
+                                        span.status.online
+                                    h3
+                                        a(href="#") Анна Овсеенко
+                                        span.item-pro
+                                    p!= '27 лет (Козерог)'
+                                    p Иркутск
+                                .filter-item
+                                    div.text-center
+                                        img(src="images/liked/2.png")
+                                        span.like.active
+                                        span.status.afk
+                                    h3
+                                        a(href="#") Анна Овсеенко
+                                        span.item-pro.active
+                                    p!= '27 лет (Рыбы)'
+                                    p Иркутск
+                                .filter-item
+                                    div.text-center
+                                        img(src="images/liked/3.png")
+                                        span.like
+                                        span.status.disconnect
+                                    h3
+                                        a(href="#") Анна Овсеенко
+                                        span.item-pro
+                                    p!= '27 лет (Весы)'
+                                    p Иркутск
+                                .filter-item
+                                    div.text-center
+                                        img(src="images/liked/1.png")
+                                        span.like
+                                        span.status.disconnect
+                                    h3
+                                        a(href="#") Анна Овсеенко
+                                        span.item-pro
+                                    p!= '27 лет (Овен)'
+                                    p Иркутск
+                                .filter-item
+                                    div.text-center
+                                        img(src="images/liked/1.png")
+                                        span.like
+                                        span.status.disconnect
+                                    h3
+                                        a(href="#") Анна Овсеенко
+                                        span.item-pro
+                                    p!= '27 лет (Козерог)'
+                                    p Иркутск
+                                .filter-item
+                                    div.text-center
+                                        img(src="images/liked/2.png")
+                                        span.like
+                                        span.status.disconnect
+                                    h3
+                                        a(href="#") Анна Овсеенко
+                                        span.item-pro
+                                    p!= '27 лет (Рыбы)'
+                                    p Иркутск
+                                .filter-item
+                                    div.text-center
+                                        img(src="images/liked/3.png")
+                                        span.like
+                                        span.status.disconnect
+                                    h3
+                                        a(href="#") Анна Овсеенко
+                                        span.item-pro.active
+                                    p!= '27 лет (Весы)'
+                                    p Иркутск
+                                .filter-item
+                                    div.text-center
+                                        img(src="images/liked/1.png")
+                                        span.like
+                                        span.status.disconnect
+                                    h3
+                                        a(href="#") Анна Овсеенко
+                                        span.item-pro.active
+                                    p!= '27 лет (Овен)'
+                                    p Иркутск
+                                .filter-item
+                                    div.text-center
+                                        img(src="images/liked/2.png")
+                                        span.like
+                                        span.status.disconnect
+                                    h3
+                                        a(href="#") Анна Овсеенко
+                                        span.item-pro
+                                    p!= '27 лет (Овен)'
+                                    p Иркутск
+                        article(role="tabpanel")#second-tab.tab-pane.fade
+                            .filter-items
+                                .filter-item
+                                    div.text-center
+                                        img(src="images/liked/1.png")
+                                        span.like
+                                        span.status.disconnect
+                                    h3
+                                        a(href="#") Анна Овсеенко
+                                        span.item-pro.active
+                                    p!= '27 лет (Козерог)'
+                                    p Иркутск
+                                .filter-item
+                                    div.text-center
+                                        img(src="images/liked/2.png")
+                                        span.like.active
+                                        span.status.disconnect
+                                    h3
+                                        a(href="#") Анна Овсеенко
+                                        span.item-pro
+                                    p!= '27 лет (Рыбы)'
+                                    p Иркутск
+                                .filter-item
+                                    div.text-center
+                                        img(src="images/liked/3.png")
+                                        span.like
+                                        span.status.disconnect
+                                    h3
+                                        a(href="#") Анна Овсеенко
+                                        span.item-pro
+                                    p!= '27 лет (Весы)'
+                                    p Иркутск
+                                .filter-item
+                                    div.text-center
+                                        img(src="images/liked/1.png")
+                                        span.like
+                                        span.status.disconnect
+                                    h3
+                                        a(href="#") Анна Овсеенко
+                                        span.item-pro.active
+                                    p!= '27 лет (Овен)'
+                                    p Иркутск
+                                .filter-item
+                                    div.text-center
+                                        img(src="images/liked/1.png")
+                                        span.like
+                                        span.status.disconnect
+                                    h3
+                                        a(href="#") Анна Овсеенко
+                                        span.item-pro
+                                    p!= '27 лет (Козерог)'
+                                    p Иркутск
+                                .filter-item
+                                    div.text-center
+                                        img(src="images/liked/2.png")
+                                        span.like
+                                        span.status.disconnect
+                                    h3
+                                        a(href="#") Анна Овсеенко
+                                        span.item-pro
+                                    p!= '27 лет (Рыбы)'
+                                    p Иркутск
+                                .filter-item
+                                    div.text-center
+                                        img(src="images/liked/3.png")
+                                        span.like
+                                        span.status.disconnect
+                                    h3
+                                        a(href="#") Анна Овсеенко
+                                        span.item-pro
+                                    p!= '27 лет (Весы)'
+                                    p Иркутск
+                                .filter-item
+                                    div.text-center
+                                        img(src="images/liked/1.png")
+                                        span.like
+                                        span.status.disconnect
+                                    h3
+                                        a(href="#") Анна Овсеенко
+                                        span.item-pro
+                                    p!= '27 лет (Овен)'
+                                    p Иркутск
+                                .filter-item
+                                    div.text-center
+                                        img(src="images/liked/2.png")
+                                        span.like
+                                        span.status.disconnect
+                                    h3
+                                        a(href="#") Анна Овсеенко
+                                        span.item-pro
+                                    p!= '27 лет (Овен)'
+                                    p Иркутск

@@ -1,0 +1,77 @@
+extends _layout
+
+block content
+    article#work-space
+        #registration
+            #step-line
+                section
+                    .st-one
+                        span 1
+                        p Основная  информация  профиля
+                    .st-two
+                        span 2
+                        p Добавьте свои фотографии
+            .tab-content
+                article(role="tabpanel")#step-one.tab-pane.fade.in.active
+                    div
+                        section
+                            p После заполнения
+                                br
+                                | нажмите кнопку продолжить
+                            form
+                                .form-group
+                                    p Дата рождения
+                                    select
+                                        option 27
+                                    select
+                                        option Марта
+                                    select
+                                        option 1994
+                                .form-group
+                                    p Укажите ваш город
+                                    .input-group
+                                        input(type="search" required="required" value="Иркутск")#hp-search.form-control
+                                        span.input-group-btn
+                                            button.btn.btn-default(type="button")
+                                a(href="#step-two" aria-controls="settings" role="tab" data-toggle="tab").step-one Продолжить
+                        section
+                            h3 Тизер описывающий
+                                br
+                                | данный шаг, зачем он нужен.
+                            p Текст более полно описывающий данный шаг, презентующий сервис. Продавай свой номер за любую сумму и выводи деньги без ограничений в любое время абсолютно бесплатно!
+                article(role="tabpanel")#step-two.tab-pane.fade
+                    div
+                        section
+                            form#add-images
+                                div.mousewheel
+                                    .download-btn
+                                        input(type="file")
+                                        span.file-bg
+                                        span.file-text Добавить
+                                    .add-image
+                                        img(src="images/registration/1.png")
+                                    .add-image
+                                        img(src="images/registration/1.png")
+                                    .add-image
+                                        img(src="images/registration/1.png")
+                                    .add-image
+                                        img(src="images/registration/1.png")
+                                    .add-image
+                                        img(src="images/registration/1.png")
+                                    .add-image
+                                        img(src="images/registration/1.png")
+                                    .add-image
+                                        img(src="images/registration/1.png")
+                                    .add-image
+                                        img(src="images/registration/1.png")
+                                    .add-image
+                                        img(src="images/registration/1.png")
+                                button(type="submit").submit Продолжить
+                                a(href="#step-one" aria-controls="settings" role="tab" data-toggle="tab").step-two < Назад
+                                a(href="#") Пропустить шаг >
+                        section
+                            h3 Тизер описывающий
+                                br
+                                | данный шаг, зачем он нужен.
+                            p Текст более полно описывающий данный шаг, презентующий сервис. Продавай свой номер за любую сумму и выводи деньги без ограничений в любое время абсолютно бесплатно!
+
