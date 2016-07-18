@@ -65,6 +65,9 @@ main {
           text-shadow: 1px 0 1px #fff;
           transition: all .2s ease-in-out;
           @media screen and (max-height: 900px) {
+            font-size: 16px;
+          }
+          @media screen and (max-height: 900px) {
             padding: 6px 15px;
           }
           @media screen and (max-width: $screen-tablet) {
@@ -124,8 +127,9 @@ main {
     border-radius: 9px;
     margin-top: 70px;
     @media screen and (max-height: 900px) {
-      margin-top: 30dupx;
-      height: 468px;
+      width: 960px;
+      margin: 30px auto;
+      height: 445px;
     }
     @media screen and (max-width: $screen-tablet) {
       width: 90%;
@@ -141,6 +145,10 @@ main {
       background: #fff;
       font-size: 36px;
       color: #393939;
+      @media screen and (max-height: 900px) {
+        font-size: 32px;
+        width: 220px;
+      }
     }
     .col-sm-6 {
       .hp-reg-without {
@@ -152,6 +160,7 @@ main {
         border-bottom: 1px solid #cccccc;
         @media screen and (max-height: 900px) {
           margin-top: -20px;
+          padding: 0 100px 15px;
         }
         @media screen and (max-width: $screen-lg-desktop) {
           padding: 0 100px 15px;
@@ -196,6 +205,10 @@ main {
         background: #f9f9f9;
         padding: 20px 150px;
         border-color: #e1e1e1;
+        @media screen and (max-height: 900px) {
+          padding: 20px 100px;
+          height: 361px;
+        }
         @media screen and (max-width: $screen-lg-desktop) {
           padding: 20px 100px;
         }
@@ -270,7 +283,7 @@ main {
       @media screen and (max-height: 900px) {
         height: 220px;
         width: 210px;
-        left: 210px;
+        left: 80px;
         top: -221px;
         img {
           width: 100%;
@@ -294,7 +307,7 @@ main {
       text-align: center;
       width: 250px;
       @media screen and (max-height: 900px) {
-        top: 20px;
+        top: 30px;
         right: 155px;
       }
       @media screen and (max-width: $screen-desktop) {
@@ -313,13 +326,24 @@ main {
       h3 {
         font-size: 36px;
         font-weight: 400;
+        @media screen and (max-height: 900px) {
+          font-size: 32px;
+          margin: 5px 0;
+        }
       }
       p {
         font-size: 18px;
+        @media screen and (max-height: 900px) {
+          font-size: 16px;
+          margin: 5px 0;
+        }
       }
       p:last-of-type {
         font-size: 14px;
         color: #727272;
+        @media screen and (max-height: 900px) {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -331,6 +355,14 @@ main {
     border: 1px solid #cccccc;
     border-radius: 9px;
     padding: 0 0 80px;
+    @media screen and (max-height: 900px) {
+      width: 960px;
+      margin: 60px auto;
+      padding-bottom: 60px;
+      img {
+        width: 40%;
+      }
+    }
     @media screen and (max-width: $screen-tablet) {
       width: 90%;
       margin: 90px auto 0;
@@ -348,6 +380,11 @@ main {
       background: #fff;
       font-size: 36px;
       color: #393939;
+      @media screen and (max-height: 900px) {
+        margin-bottom: 60px;
+        font-size: 32px;
+        width: 260px;
+      }
       @media screen and (max-width: $screen-tablet) {
         width: 92%;
         padding: 0 5px;
@@ -366,6 +403,9 @@ main {
         font-size: 30px;
         color: #000000;
         font-weight: 400;
+        @media screen and (max-height: 900px) {
+          font-size: 26px;
+        }
         @media screen and (max-width: $screen-desktop) {
           font-size: 26px;
         }
@@ -374,6 +414,10 @@ main {
         font-size: 18px;
         line-height: 28px;
         font-weight: 300;
+        @media screen and (max-height: 900px) {
+          font-size: 14px;
+          line-height: 1.5;
+        }
         @media screen and (max-width: $screen-desktop) {
           font-size: 14px;
           line-height: 1.5;
@@ -394,6 +438,7 @@ main {
     height: 48px;
     @media screen and (max-height: 900px) {
       height: 40px;
+      font-size: 18px;
     }
     &::-webkit-input-placeholder,
     &::-moz-placeholder {
@@ -410,6 +455,10 @@ main {
   font-weight: 700;
   font-size: 24px;
   transition: all .3s linear;
+  @media screen and (max-height: 900px) {
+    height: 46px;
+    font-size: 22px;
+  }
   &:hover {
     color: #ffffff;
     background: darken($color-green, 10%);

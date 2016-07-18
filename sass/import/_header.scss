@@ -17,6 +17,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @media screen and (max-height: 900px) {
+        width: 960px;
+      }
       @media screen and (max-width: $screen-lg-desktop) {
         width: 997px;
       }
